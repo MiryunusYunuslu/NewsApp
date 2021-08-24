@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.MainActivity">
+    <androidx.appcompat.widget.Toolbar
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/toolbar12"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="?attr/actionBarSize"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        >
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="News Feed"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/purple_500"/>
+    </RelativeLayout>
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/toolbar12"
+        android:id="@+id/include"
+        android:layout_height="?attr/actionBarSize"
+        app:tabSelectedTextColor="@color/purple_700"
+        app:tabTextColor="@color/purple_500"
+        app:tabIndicatorHeight="3.5dp"
+        app:tabMode="scrollable"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar12">
+
+    <com.google.android.material.tabs.TabItem
+        app:layout_constraintTop_toTopOf="@id/include"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:id="@+id/home1"
+        >
+
+    </com.google.android.material.tabs.TabItem>
+        <com.google.android.material.tabs.TabItem
+            app:layout_constraintTop_toTopOf="@id/include"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/home2"
+            android:text="Sports"
+            >
+        </com.google.android.material.tabs.TabItem>
+        <com.google.android.material.tabs.TabItem
+            app:layout_constraintTop_toTopOf="@id/include"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Health"
+            android:id="@+id/home3"
+            >
+
+        </com.google.android.material.tabs.TabItem>
+        <com.google.android.material.tabs.TabItem
+            app:layout_constraintTop_toTopOf="@id/include"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Science"
+            android:id="@+id/home4"
+            >
+
+        </com.google.android.material.tabs.TabItem>
+        <com.google.android.material.tabs.TabItem
+            app:layout_constraintTop_toTopOf="@id/include"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Entertainment"
+            android:id="@+id/home5"
+            >
+
+        </com.google.android.material.tabs.TabItem>
+        <com.google.android.material.tabs.TabItem
+            app:layout_constraintTop_toTopOf="@id/include"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Technology"
+            android:id="@+id/home6"
+            >
+
+        </com.google.android.material.tabs.TabItem>
+    </com.google.android.material.tabs.TabLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/include"
+        android:id="@+id/fragmentcontainer">
+    </androidx.viewpager.widget.ViewPager>
+
+
+</RelativeLayout>
