@@ -1,9 +1,8 @@
 package com.example.newsapp.Model;
 
-public class getModel {
+public class GetModel {
     private String author,title,description,url,urlToImage,publishedAt,content;
-
-    public getModel(String author, String title, String description, String url, String urlToImage, String publishedAt, String content) {
+    public GetModel(String author, String title, String description, String url, String urlToImage, String publishedAt, String content) {
         this.author = author;
         this.title = title;
         this.description = description;
@@ -12,7 +11,6 @@ public class getModel {
         this.publishedAt = publishedAt;
         this.content = content;
     }
-
     public String getAuthor() {
         return author;
     }

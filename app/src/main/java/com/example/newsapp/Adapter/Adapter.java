@@ -15,14 +15,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.newsapp.R;
 import com.example.newsapp.UI.WebView;
-import com.example.newsapp.Model.getModel;
+import com.example.newsapp.Model.GetModel;
 
 import java.util.ArrayList;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     Context context;
-    ArrayList<getModel> getmodel;
-    public Adapter(Context context, ArrayList<getModel> getmodel) {
+    ArrayList<GetModel> getmodel;
+    public Adapter(Context context, ArrayList<GetModel> getmodel) {
         this.context  =  context;
         this.getmodel =  getmodel;
     }

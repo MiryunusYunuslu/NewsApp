@@ -1,17 +1,16 @@
 package com.example.newsapp.Model;
 
-import com.example.newsapp.Model.getModel;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 
-public class getMainObj {
+public class GetMainObj {
     @SerializedName("status")
     private String status;
     @SerializedName("totalresult")
     private String totalresult;
     @SerializedName("articles")
-    private ArrayList <getModel> articles;
+    private ArrayList <GetModel> articles;
     public String getStatus() {
         return status;
     }
@@ -28,11 +27,11 @@ public class getMainObj {
         this.totalresult = totalresult;
     }
 
-    public ArrayList<getModel> getArticles() {
+    public ArrayList<GetModel> getArticles() {
         return articles;
     }
 
-    public void setArticles(ArrayList<getModel> articles) {
+    public void setArticles(ArrayList<GetModel> articles) {
         this.articles = articles;
     }
 }

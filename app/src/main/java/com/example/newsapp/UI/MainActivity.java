@@ -12,29 +12,15 @@ import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 
 import retrofit2.Retrofit;
-
 public class MainActivity extends AppCompatActivity {
-    private TabLayout tabLayout;
-    private TabItem home, sport, entertainment, science, tech, health;
     private PageAdapter pageAdapter;
-    private Toolbar toolbar;
     private ViewPager viewPager;
-    private Retrofit retrofit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //retrofitbuilder();
-        //toolbar=(Toolbar)findViewById(R.id.toolbar12);
-        //setSupportActionBar(toolbar);
-        home = findViewById(R.id.home1);
-        sport = findViewById(R.id.home2);
-        health = findViewById(R.id.home3);
-        science = findViewById(R.id.home4);
-        entertainment = findViewById(R.id.home5);
-        tech = findViewById(R.id.home6);
         viewPager = findViewById(R.id.fragmentcontainer);
-        tabLayout=findViewById(R.id.include);
+        TabLayout tabLayout = findViewById(R.id.include);
         pageAdapter=new PageAdapter(getSupportFragmentManager(),6);
         viewPager.setAdapter(pageAdapter);
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -53,20 +39,10 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
-
             }
         });
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
     }
 
-    /*
-    private void retrofitbuilder() {
-       Gson gson=new GsonBuilder().setLenient().create();
-       retrofit=new Retrofit.Builder().baseUrl(getBaseurl).addConverterFactory(GsonConverterFactory.create(gson)).build();
-       GetApi getApi=retrofit.create(GetApi.class);
-        //Call<getMainObj> call=getApi.getmainobj();
-    }
-
-     */
 
 }
